@@ -112,7 +112,22 @@ namespace TokyoExpress.GameEditor
             GameObject playerInstance = (GameObject)PrefabUtility.InstantiatePrefab(playerPrefab);
             playerInstance.name = "Player_TokyoMoto";
             playerInstance.transform.position = startPos;
-            playerInstance.transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+            
+            // Check start tile type to orient player in the valid initial track direction
+            Vector3 initialHeading = Vector3.forward;
+            var startEntry = level01.GetEntryAt(level01.startCoord);
+            if (startEntry != null)
+            {
+                if (startEntry.tileType == CellTileType.TurnNE) initialHeading = Vector3.right;
+                else if (startEntry.tileType == CellTileType.StraightHorizontal) initialHeading = Vector3.right;
+                else if (startEntry.tileType == CellTileType.StraightVertical) initialHeading = Vector3.forward;
+            }
+            playerInstance.transform.rotation = Quaternion.LookRotation(initialHeading, Vector3.up);
+            var initialMotoController = playerInstance.GetComponent<TokyoMotoController>();
+            if (initialMotoController != null)
+            {
+                initialMotoController.ShiftDirectionOrLane(initialHeading);
+            }
 
             // 9. Top-Down Camera setup (matching hyper-casual screenshot perspective)
             GameObject camGO = new GameObject("Main Camera");

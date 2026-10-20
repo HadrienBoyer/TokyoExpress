@@ -51,6 +51,8 @@ namespace TokyoExpress.Grid
                 FindCurrentSplineTrack();
             }
 
+            Vector3 stepMove = travelDirection * (speed * Time.deltaTime);
+
             if (currentSplineTrack != null)
             {
                 float length = currentSplineTrack.GetLength();
@@ -58,13 +60,17 @@ namespace TokyoExpress.Grid
 
                 splineT += (speed / length) * Time.deltaTime;
 
-                currentSplineTrack.Evaluate(splineT, travelDirection, out Vector3 worldPos, out Vector3 worldTangent);
-                transform.position = new Vector3(worldPos.x, transform.position.y, worldPos.z);
+                currentSplineTrack.Evaluate(Mathf.Clamp01(splineT), travelDirection, out Vector3 worldPos, out Vector3 worldTangent);
+                
+                Vector3 targetSplinePos = new Vector3(worldPos.x, transform.position.y, worldPos.z);
+                Vector3 lateralCorrection = (targetSplinePos - transform.position);
+                lateralCorrection.y = 0f;
 
-                if (worldTangent.sqrMagnitude > 0.01f)
-                {
-                    transform.rotation = Quaternion.LookRotation(worldTangent.normalized, Vector3.up);
-                }
+                Vector3 finalMovement = stepMove + Vector3.ClampMagnitude(lateralCorrection, speed * Time.deltaTime * 0.75f);
+                transform.position += finalMovement;
+
+                Vector3 lookDir = (worldTangent.sqrMagnitude > 0.01f) ? worldTangent : travelDirection;
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDir, Vector3.up), 10f * Time.deltaTime);
 
                 if (splineT >= 1.0f)
                 {
@@ -75,7 +81,7 @@ namespace TokyoExpress.Grid
             else
             {
                 // Fallback straight movement
-                transform.position += travelDirection * (speed * Time.deltaTime);
+                transform.position += stepMove;
 
                 // Turn around or switch lanes if dead end reached
                 if (Physics.Raycast(transform.position + Vector3.up * 0.5f, travelDirection, raycastForwardDist, obstacleLayer))

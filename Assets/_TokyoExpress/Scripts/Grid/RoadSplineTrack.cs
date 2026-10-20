@@ -28,53 +28,78 @@ namespace TokyoExpress.Grid
 
         /// <summary>
         /// Evaluates a world position and tangent on the spline at normalized progress t [0, 1]
-        /// taking entry and exit direction into account.
+        /// taking entry and travel direction into account.
         /// </summary>
-        public void Evaluate(float t, Vector3 entryDir, out Vector3 worldPos, out Vector3 worldTangent)
+        public void Evaluate(float t, Vector3 travelDir, out Vector3 worldPos, out Vector3 worldTangent)
         {
             t = Mathf.Clamp01(t);
 
             if (splineContainer != null && splineContainer.Splines != null && splineContainer.Splines.Count > 0)
             {
-                // Find best matching spline index if multiple splines exist (e.g. crossroad)
                 int splineIndex = 0;
-                if (splineContainer.Splines.Count > 1)
+                bool isReversed = false;
+
+                if (splineContainer.Splines.Count == 1)
                 {
+                    // Single spline: Check if native spline direction aligns with travel direction
+                    splineContainer.Evaluate(0, 0f, out var p0, out _, out _);
+                    splineContainer.Evaluate(0, 1f, out var p1, out _, out _);
+                    Vector3 nativeDir = (transform.TransformPoint(p1) - transform.TransformPoint(p0)).normalized;
+                    if (Vector3.Dot(nativeDir, travelDir) < -0.1f)
+                    {
+                        isReversed = true;
+                    }
+                }
+                else
+                {
+                    // Multiple splines (e.g. crossroad): Pick the spline that best matches travel direction
                     float bestDot = -999f;
                     for (int i = 0; i < splineContainer.Splines.Count; i++)
                     {
-                        var s = splineContainer.Splines[i];
-                        if (s.Count >= 2)
+                        splineContainer.Evaluate(i, 0f, out var p0, out _, out _);
+                        splineContainer.Evaluate(i, 1f, out var p1, out _, out _);
+                        Vector3 dir = (transform.TransformPoint(p1) - transform.TransformPoint(p0)).normalized;
+                        float dot = Vector3.Dot(dir, travelDir);
+                        if (dot > bestDot)
                         {
-                            Vector3 dir = (transform.TransformPoint((Vector3)s[1].Position) - transform.TransformPoint((Vector3)s[0].Position)).normalized;
-                            float dot = Vector3.Dot(dir, entryDir);
-                            if (dot > bestDot)
-                            {
-                                bestDot = dot;
-                                splineIndex = i;
-                            }
+                            bestDot = dot;
+                            splineIndex = i;
+                            isReversed = false;
+                        }
+                        // Also check reverse of this spline
+                        float revDot = Vector3.Dot(-dir, travelDir);
+                        if (revDot > bestDot)
+                        {
+                            bestDot = revDot;
+                            splineIndex = i;
+                            isReversed = true;
                         }
                     }
                 }
 
-                splineContainer.Evaluate(splineIndex, t, out var localPos, out var localTangent, out _);
+                float sampleT = isReversed ? (1f - t) : t;
+                splineContainer.Evaluate(splineIndex, sampleT, out var localPos, out var localTangent, out _);
                 worldPos = transform.TransformPoint(localPos);
                 worldTangent = transform.TransformDirection(localTangent);
-
-                // If tangent is facing opposite entry direction, invert tangent
-                if (Vector3.Dot(worldTangent, entryDir) < 0f && splineContainer.Splines.Count == 1)
+                if (isReversed)
                 {
-                    // Reverse evaluation if entry direction opposes spline native direction
-                    splineContainer.Evaluate(splineIndex, 1f - t, out localPos, out localTangent, out _);
-                    worldPos = transform.TransformPoint(localPos);
-                    worldTangent = -transform.TransformDirection(localTangent);
+                    worldTangent = -worldTangent;
+                }
+
+                if (worldTangent.sqrMagnitude > 0.001f)
+                {
+                    worldTangent = worldTangent.normalized;
+                }
+                else
+                {
+                    worldTangent = travelDir;
                 }
             }
             else
             {
                 // Fallback straight evaluation across tile
-                worldPos = transform.position + entryDir * ((t - 0.5f) * 2f);
-                worldTangent = entryDir;
+                worldPos = transform.position + travelDir * ((t - 0.5f) * 2f);
+                worldTangent = travelDir;
             }
         }
 

@@ -99,12 +99,12 @@ namespace TokyoExpress.Player
         private void Update()
         {
             HandleAbilitiesTimers();
-            ApplyForwardSplineMovement();
+            ApplyContinuousSplineMovement();
             ApplyVerticalGravity();
             UpdateGridPosition();
         }
 
-        private void ApplyForwardSplineMovement()
+        private void ApplyContinuousSplineMovement()
         {
             if (isStoppedAtIntersection)
             {
@@ -122,6 +122,8 @@ namespace TokyoExpress.Player
                 }
             }
 
+            Vector3 stepMove = moveDirection * (currentSpeed * Time.deltaTime);
+
             if (currentSplineTrack != null)
             {
                 float length = currentSplineTrack.GetLength();
@@ -129,22 +131,26 @@ namespace TokyoExpress.Player
 
                 splineT += (currentSpeed / length) * Time.deltaTime;
 
-                currentSplineTrack.Evaluate(splineT, moveDirection, out Vector3 worldPos, out Vector3 worldTangent);
+                currentSplineTrack.Evaluate(Mathf.Clamp01(splineT), moveDirection, out Vector3 worldPos, out Vector3 worldTangent);
                 
-                // Move character controller towards evaluated spline point
-                Vector3 targetPos = new Vector3(worldPos.x, transform.position.y, worldPos.z);
-                Vector3 delta = targetPos - transform.position;
-                characterController.Move(delta);
+                // Keep y position driven by gravity/characterController
+                Vector3 targetSplinePos = new Vector3(worldPos.x, transform.position.y, worldPos.z);
+                
+                // Gentle lateral centering towards spline track without snapping
+                Vector3 lateralCorrection = (targetSplinePos - transform.position);
+                lateralCorrection.y = 0f;
+                // Move forward continuously along moveDirection, gently damped laterally to spline center
+                Vector3 finalMovement = stepMove + Vector3.ClampMagnitude(lateralCorrection, currentSpeed * Time.deltaTime * 0.75f);
+                characterController.Move(finalMovement);
 
-                if (worldTangent.sqrMagnitude > 0.01f)
-                {
-                    Quaternion targetRot = Quaternion.LookRotation(worldTangent.normalized, Vector3.up);
-                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSmooth * Time.deltaTime);
-                }
+                // Orient towards the spline tangent or heading
+                Vector3 lookDir = (worldTangent.sqrMagnitude > 0.01f) ? worldTangent : moveDirection;
+                Quaternion targetRot = Quaternion.LookRotation(lookDir, Vector3.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSmooth * Time.deltaTime);
 
                 if (splineT >= 1.0f)
                 {
-                    // Transition to next tile along current direction
+                    // Transition to next tile smoothly without position snap
                     splineT = 0f;
                     currentSplineTrack = null;
                 }
@@ -152,13 +158,12 @@ namespace TokyoExpress.Player
             else
             {
                 // Fallback direct movement along moveDirection
-                Vector3 forwardMove = moveDirection * (currentSpeed * Time.deltaTime);
                 if (moveDirection.sqrMagnitude > 0.01f)
                 {
                     Quaternion targetRot = Quaternion.LookRotation(moveDirection, Vector3.up);
                     transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSmooth * Time.deltaTime);
                 }
-                characterController.Move(forwardMove);
+                characterController.Move(stepMove);
             }
         }
 
@@ -219,7 +224,7 @@ namespace TokyoExpress.Player
                         Vector3 worldCellCenter = LevelRuntimeBuilder.Instance.GridToWorldPosition(CurrentGridCoord, cellSize);
                         float distToCenter = Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(worldCellCenter.x, worldCellCenter.z));
 
-                        // Turn when approaching the tile center
+                        // Turn when entering or approaching the tile center
                         if (distToCenter < cellSize * 0.45f)
                         {
                             Vector3 newAutoDir = GetAutoTurnDirection(entry.tileType, moveDirection);
@@ -227,8 +232,6 @@ namespace TokyoExpress.Player
                             {
                                 moveDirection = newAutoDir;
                                 lastTurnedCell = CurrentGridCoord;
-                                currentSplineTrack = null;
-                                splineT = 0f;
                             }
                         }
                     }
@@ -243,16 +246,27 @@ namespace TokyoExpress.Player
             currentSplineTrack = null;
             splineT = 0.5f;
 
-            // Snap vehicle exactly to intersection center
-            transform.position = new Vector3(worldPos.x, transform.position.y, worldPos.z);
-
-            // Compute available directions (cannot go backwards)
+            // Compute available valid directions (cannot go backwards, and destination tile must exist and be road)
             availableForkDirections.Clear();
             Vector3[] candidates = new Vector3[] { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
+
+            var level = LevelRuntimeBuilder.Instance != null ? LevelRuntimeBuilder.Instance.ActiveLevel : null;
 
             foreach (var cand in candidates)
             {
                 if (cand == -moveDirection) continue; // Exclude U-turn
+
+                if (level != null)
+                {
+                    Vector2Int neighborCoord = coord + new Vector2Int(Mathf.RoundToInt(cand.x), Mathf.RoundToInt(cand.z));
+                    var neighborEntry = level.GetEntryAt(neighborCoord);
+                    if (neighborEntry == null || neighborEntry.tileType == CellTileType.Empty || neighborEntry.tileType == CellTileType.Building)
+                    {
+                        // Not a road tile or out of bounds
+                        continue;
+                    }
+                }
+
                 availableForkDirections.Add(cand);
             }
 
