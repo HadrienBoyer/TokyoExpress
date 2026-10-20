@@ -86,5 +86,30 @@ namespace TokyoExpress.Grid
             }
             return 2.0f; // Default grid cell size
         }
+
+        private void OnDrawGizmos()
+        {
+            if (splineContainer == null || splineContainer.Splines == null) return;
+
+            Gizmos.color = new Color(0.1f, 0.95f, 0.95f, 0.85f); // Neon Cyan
+
+            for (int s = 0; s < splineContainer.Splines.Count; s++)
+            {
+                int steps = 16;
+                Vector3 prevPoint = Vector3.zero;
+                for (int i = 0; i <= steps; i++)
+                {
+                    float t = (float)i / steps;
+                    splineContainer.Evaluate(s, t, out var localPos, out _, out _);
+                    Vector3 worldPos = transform.TransformPoint(localPos);
+
+                    if (i > 0)
+                    {
+                        Gizmos.DrawLine(prevPoint, worldPos);
+                    }
+                    prevPoint = worldPos;
+                }
+            }
+        }
     }
 }

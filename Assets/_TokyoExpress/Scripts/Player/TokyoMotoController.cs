@@ -56,6 +56,16 @@ namespace TokyoExpress.Player
         {
             currentSpeed = baseSpeed;
 
+            if (LevelRuntimeBuilder.Instance != null && LevelRuntimeBuilder.Instance.ActiveLevel != null)
+            {
+                CurrentGridCoord = LevelRuntimeBuilder.Instance.WorldToGridPosition(transform.position, LevelRuntimeBuilder.Instance.ActiveLevel.cellSize);
+                GameObject startTileGO = LevelRuntimeBuilder.Instance.GetTileObjectAt(CurrentGridCoord);
+                if (startTileGO != null)
+                {
+                    currentSplineTrack = startTileGO.GetComponent<RoadSplineTrack>();
+                }
+            }
+
             if (OneTouchInputManager.Instance != null)
             {
                 OneTouchInputManager.Instance.OnSwipeDetected += HandleSwipe;

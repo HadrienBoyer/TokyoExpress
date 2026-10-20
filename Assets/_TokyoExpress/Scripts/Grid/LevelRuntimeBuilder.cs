@@ -33,17 +33,55 @@ namespace TokyoExpress.Grid
 
         public GameObject GetTileObjectAt(Vector2Int coord)
         {
-            if (spawnedGridObjects.TryGetValue(coord, out GameObject obj))
+            if (spawnedGridObjects.TryGetValue(coord, out GameObject obj) && obj != null)
             {
                 return obj;
             }
+
+            // Fallback: search among child tiles if scene was saved with static children
+            if (currentActiveLevel != null)
+            {
+                Vector3 targetPos = GridToWorldPosition(coord, currentActiveLevel.cellSize);
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Transform child = transform.GetChild(i);
+                    if (Vector2.Distance(new Vector2(child.position.x, child.position.z), new Vector2(targetPos.x, targetPos.z)) < currentActiveLevel.cellSize * 0.45f)
+                    {
+                        spawnedGridObjects[coord] = child.gameObject;
+                        return child.gameObject;
+                    }
+                }
+            }
+
             return null;
         }
 
         private void Awake()
         {
-            if (Instance == null) Instance = this;
-            else Destroy(gameObject);
+            if (Instance == null)
+            {
+                Instance = this;
+                IndexExistingChildTiles();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        public void IndexExistingChildTiles()
+        {
+            if (currentActiveLevel == null) return;
+            float cellSize = currentActiveLevel.cellSize;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform child = transform.GetChild(i);
+                Vector2Int coord = WorldToGridPosition(child.position, cellSize);
+                if (!spawnedGridObjects.ContainsKey(coord))
+                {
+                    spawnedGridObjects[coord] = child.gameObject;
+                }
+            }
         }
 
         public void ClearSpawnedLevel()
