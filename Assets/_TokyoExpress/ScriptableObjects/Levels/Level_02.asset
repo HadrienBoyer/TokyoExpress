@@ -513,13 +513,13 @@ MonoBehaviour:
     hasObstacle: 0
     isStartStation: 0
     isDeliveryTarget: 0
-  - coordinates: {x: 2, y: 3}
+  - coordinates: {x: 2, y: 4}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0
     isStartStation: 0
     isDeliveryTarget: 0
-  - coordinates: {x: 2, y: 4}
+  - coordinates: {x: 2, y: 6}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0
@@ -549,7 +549,7 @@ MonoBehaviour:
     hasObstacle: 0
     isStartStation: 0
     isDeliveryTarget: 0
-  - coordinates: {x: 2, y: 12}
+  - coordinates: {x: 2, y: 13}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0
@@ -585,7 +585,7 @@ MonoBehaviour:
     hasObstacle: 0
     isStartStation: 0
     isDeliveryTarget: 0
-  - coordinates: {x: 3, y: 6}
+  - coordinates: {x: 3, y: 7}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0
@@ -604,12 +604,6 @@ MonoBehaviour:
     isStartStation: 0
     isDeliveryTarget: 0
   - coordinates: {x: 3, y: 11}
-    tileType: 9
-    rotationSteps: 0
-    hasObstacle: 0
-    isStartStation: 0
-    isDeliveryTarget: 0
-  - coordinates: {x: 3, y: 12}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0
@@ -711,7 +705,13 @@ MonoBehaviour:
     hasObstacle: 0
     isStartStation: 0
     isDeliveryTarget: 0
-  - coordinates: {x: 6, y: 3}
+  - coordinates: {x: 6, y: 2}
+    tileType: 9
+    rotationSteps: 0
+    hasObstacle: 0
+    isStartStation: 0
+    isDeliveryTarget: 0
+  - coordinates: {x: 6, y: 4}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0
@@ -729,12 +729,6 @@ MonoBehaviour:
     hasObstacle: 0
     isStartStation: 0
     isDeliveryTarget: 0
-  - coordinates: {x: 6, y: 8}
-    tileType: 9
-    rotationSteps: 0
-    hasObstacle: 0
-    isStartStation: 0
-    isDeliveryTarget: 0
   - coordinates: {x: 6, y: 9}
     tileType: 9
     rotationSteps: 0
@@ -742,6 +736,12 @@ MonoBehaviour:
     isStartStation: 0
     isDeliveryTarget: 0
   - coordinates: {x: 6, y: 11}
+    tileType: 9
+    rotationSteps: 0
+    hasObstacle: 0
+    isStartStation: 0
+    isDeliveryTarget: 0
+  - coordinates: {x: 6, y: 12}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0
@@ -801,6 +801,12 @@ MonoBehaviour:
     hasObstacle: 0
     isStartStation: 0
     isDeliveryTarget: 0
+  - coordinates: {x: 7, y: 9}
+    tileType: 9
+    rotationSteps: 0
+    hasObstacle: 0
+    isStartStation: 0
+    isDeliveryTarget: 0
   - coordinates: {x: 7, y: 11}
     tileType: 9
     rotationSteps: 0
@@ -808,12 +814,6 @@ MonoBehaviour:
     isStartStation: 0
     isDeliveryTarget: 0
   - coordinates: {x: 7, y: 12}
-    tileType: 9
-    rotationSteps: 0
-    hasObstacle: 0
-    isStartStation: 0
-    isDeliveryTarget: 0
-  - coordinates: {x: 7, y: 13}
     tileType: 9
     rotationSteps: 0
     hasObstacle: 0

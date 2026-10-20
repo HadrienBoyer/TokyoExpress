@@ -18,7 +18,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   bikePrefab: {fileID: 0}
   priceCoins: 900
-  baseSpeed: 12
+  baseSpeed: 6.5
   jumpForce: 2.8
   ability: 2
   abilityDuration: 3
