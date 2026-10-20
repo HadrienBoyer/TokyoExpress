@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 629945b24cd1f394a9094db4f14ab1ed
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_wall_big_door_top.mtl
+  uploadId: 871974

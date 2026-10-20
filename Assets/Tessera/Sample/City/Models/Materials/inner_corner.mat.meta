@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f02c4c96c678a0b47b091498ac695ddb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/City/Models/Materials/inner_corner.mat
+  uploadId: 871974

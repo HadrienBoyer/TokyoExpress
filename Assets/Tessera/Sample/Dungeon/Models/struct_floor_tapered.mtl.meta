@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0d8ec0d328d450242bf54bfd883aea75
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_floor_tapered.mtl
+  uploadId: 871974

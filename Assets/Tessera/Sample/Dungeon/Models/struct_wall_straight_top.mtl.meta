@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 846c96cebf4b7e043a5040c0db97a0df
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_wall_straight_top.mtl
+  uploadId: 871974

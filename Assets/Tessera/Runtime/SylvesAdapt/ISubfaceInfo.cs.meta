@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e482ab6248cdde24ebf6640df36c6bc8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Runtime/SylvesAdapt/ISubfaceInfo.cs
+  uploadId: 871974

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a226516f89bb74d4881605b560f777b7
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/prop_wall_torch.mtl
+  uploadId: 871974

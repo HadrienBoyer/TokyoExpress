@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f1acf102cd51c8b4fa12bcbedcc361dd
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_large_curved_steps.mtl
+  uploadId: 871974

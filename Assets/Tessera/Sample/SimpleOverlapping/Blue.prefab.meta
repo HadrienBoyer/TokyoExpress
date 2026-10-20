@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3ed59efad0e6b894f9ba5005cb14bc09
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/SimpleOverlapping/Blue.prefab
+  uploadId: 871974

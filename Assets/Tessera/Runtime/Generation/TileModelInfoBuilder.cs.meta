@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 61ae32bbd8abed04baf2f8dad6273fe0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Runtime/Generation/TileModelInfoBuilder.cs
+  uploadId: 871974

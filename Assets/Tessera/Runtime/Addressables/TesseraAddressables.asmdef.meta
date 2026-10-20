@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d1146f5983c37ea44a7a91a6bc368356
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Runtime/Addressables/TesseraAddressables.asmdef
+  uploadId: 871974

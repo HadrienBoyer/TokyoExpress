@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 377caf3ae1d9d4d4ca78b6dc63633d10
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Skyscrapers/Materials/CastlePP.asset
+  uploadId: 871974

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ebf9079e71584bb4cb4c04e8a4d46280
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/HexRaceway/Models/Terrain_Grass_Hill_Straight.mtl
+  uploadId: 871974

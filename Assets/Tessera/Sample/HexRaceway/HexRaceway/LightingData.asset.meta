@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ae14cb0d8ddd024db63298007cae39a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/HexRaceway/HexRaceway/LightingData.asset
+  uploadId: 871974

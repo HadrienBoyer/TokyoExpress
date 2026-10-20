@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 46703f6bbe9d159499cb7394f8bf7c31
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/trap_floor_spikes.mtl
+  uploadId: 871974

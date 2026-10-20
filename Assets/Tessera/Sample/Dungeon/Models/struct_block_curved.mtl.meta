@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3ad189f0c6d37e94b8d02d2173ee2e16
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_block_curved.mtl
+  uploadId: 871974

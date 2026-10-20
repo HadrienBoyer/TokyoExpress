@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1ac1d7c6d6760ca4b8c1604c61e515a6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_wall_joint_base.mtl
+  uploadId: 871974

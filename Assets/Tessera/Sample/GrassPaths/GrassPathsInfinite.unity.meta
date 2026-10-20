@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5ec5a77483d47a84a8e0788f823db80a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/GrassPaths/GrassPathsInfinite.unity
+  uploadId: 871974

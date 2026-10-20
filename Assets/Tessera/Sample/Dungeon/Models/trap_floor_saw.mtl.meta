@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cccbaa9f1a158fd4ea68123e39ef0940
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/trap_floor_saw.mtl
+  uploadId: 871974

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b81c4e44753fa2c4caf2a7900d657347
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/HexRaceway/Models/CREDITS.txt
+  uploadId: 871974

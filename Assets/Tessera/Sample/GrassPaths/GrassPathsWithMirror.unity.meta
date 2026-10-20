@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6b089176e8d74ba408e8ba773c8e2cb5
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/GrassPaths/GrassPathsWithMirror.unity
+  uploadId: 871974

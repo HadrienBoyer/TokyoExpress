@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e096445a792e2514ea5dc8e48894999e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/SimpleOverlapping/SimpleOverlappingInfinite.unity
+  uploadId: 871974

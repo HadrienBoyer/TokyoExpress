@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4bfdc936033a2842924caf0ff5da213
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Platformer/PlatformerPalette.asset
+  uploadId: 871974

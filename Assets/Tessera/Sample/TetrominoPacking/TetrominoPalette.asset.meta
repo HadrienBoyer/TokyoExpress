@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 51ec20d4322e07647b90ce06e13cfc13
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/TetrominoPacking/TetrominoPalette.asset
+  uploadId: 871974

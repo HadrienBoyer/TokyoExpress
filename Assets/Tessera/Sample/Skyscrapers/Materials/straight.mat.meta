@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 551bbd01eb874a94ab7067d1e23ef707
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Skyscrapers/Materials/straight.mat
+  uploadId: 871974

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bfde12b78827af748ba85ada8e92dfff
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/HexRaceway/Models/Track_Flat_Curve_Gentle.mtl
+  uploadId: 871974

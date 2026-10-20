@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: de1a92666ce24b342a5c05422f588068
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Platformer/CREDITS.txt
+  uploadId: 871974

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 565815bb22ad5514494106167ca7d1ce
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_wall_cell_door_main.mtl
+  uploadId: 871974

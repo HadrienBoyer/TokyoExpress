@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7deb1aeccd1691140819ded9570309a7
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Platformer/Platformer.unity
+  uploadId: 871974

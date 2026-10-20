@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b23f3cb6a02f5b941bf51b03ba1836d9
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_pillar_angled_top.mtl
+  uploadId: 871974

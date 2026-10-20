@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 179f1606e80882e438180326a293ff9d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_steps_curved_inner.mtl
+  uploadId: 871974

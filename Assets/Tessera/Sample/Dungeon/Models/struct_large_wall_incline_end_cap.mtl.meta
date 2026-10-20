@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6263613e6c3dfde47b11b6da55c0e086
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_large_wall_incline_end_cap.mtl
+  uploadId: 871974

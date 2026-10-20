@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 759045788a0929246b25d2be02e909cf
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_block_curved_subtract.mtl
+  uploadId: 871974

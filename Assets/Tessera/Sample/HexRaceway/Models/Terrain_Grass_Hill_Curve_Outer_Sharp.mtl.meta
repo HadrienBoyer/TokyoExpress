@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ccba1d3b9ca3b214199db2100f272005
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/HexRaceway/Models/Terrain_Grass_Hill_Curve_Outer_Sharp.mtl
+  uploadId: 871974

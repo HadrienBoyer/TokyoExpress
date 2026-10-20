@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e116a9e7977fc574cb9206643da9bdab
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_wall_curved_main.mtl
+  uploadId: 871974

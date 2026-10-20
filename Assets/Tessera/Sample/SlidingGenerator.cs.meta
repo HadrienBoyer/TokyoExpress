@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a93d0f14d46299f4b8c3114fa3913975
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/SlidingGenerator.cs
+  uploadId: 871974

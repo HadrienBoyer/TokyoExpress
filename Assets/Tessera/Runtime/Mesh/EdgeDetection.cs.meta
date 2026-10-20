@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 69ef2c7746b805041bd438fce7ab843e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Runtime/Mesh/EdgeDetection.cs
+  uploadId: 871974

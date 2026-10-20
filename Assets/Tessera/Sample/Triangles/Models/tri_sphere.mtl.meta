@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 749c0a541eebd014da9c342fc2bb4776
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Triangles/Models/tri_sphere.mtl
+  uploadId: 871974

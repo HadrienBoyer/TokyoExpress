@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5dedf6451ced0294f9b60b95e9f301aa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Runtime/Addressables/TesseraAddressableOutput.cs
+  uploadId: 871974

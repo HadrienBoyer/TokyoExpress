@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1ae3fb1f3bd858e43b5b2eadfe4a48d4
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Building/BuildingPaintFromMesh.unity
+  uploadId: 871974

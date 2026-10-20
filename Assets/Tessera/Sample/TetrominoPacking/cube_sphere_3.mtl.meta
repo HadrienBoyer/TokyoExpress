@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e48d544f01d1fb241b4e3ea9d181233f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/TetrominoPacking/cube_sphere_3.mtl
+  uploadId: 871974

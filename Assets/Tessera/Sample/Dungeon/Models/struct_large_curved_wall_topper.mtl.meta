@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cc3961f0e39e1934391af676aae36f7d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/struct_large_curved_wall_topper.mtl
+  uploadId: 871974

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 50eaf99cfe1537b44ac809e694a08c9c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Runtime/Generation/TesseraGeneratorHelperOptions.cs
+  uploadId: 871974

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d4eb25c11e712d042854595df501d87f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 161077
+  packageName: Tessera Pro
+  packageVersion: 6.4.1
+  assetPath: Assets/Tessera/Sample/Dungeon/Models/prop_wall_chains.mtl
+  uploadId: 871974

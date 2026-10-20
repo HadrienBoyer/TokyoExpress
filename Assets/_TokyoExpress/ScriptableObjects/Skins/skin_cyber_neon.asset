@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442976127c6704c8d9e94779fcdb9102, type: 3}
+  m_Name: skin_cyber_neon
+  m_EditorClassIdentifier: Assembly-CSharp::TokyoExpress.Data.SkinItemData
+  id: skin_cyber_neon
+  skinName: Cyber Rider Neon
+  icon: {fileID: 0}
+  characterMaterial: {fileID: 2100000, guid: 5cb70de45eeed422f90d8cc2b2034f71, type: 2}
+  priceCoins: 200
